@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio - MYHOME</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="index.js" defer></script>
+</head>
+<body>
+<header>
+  <div class="logo">
+    <span class="logo-text">MYHOME</span>
+  </div>
+  <nav class="nav-menu">
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="registro.html">Registro</a>
+      <a href="buscar-propiedades.html">Buscar Propiedades</a>
+      <a href="asesores.html">Asesores</a>
+      <a href="contactanos.html">Contáctanos</a>
+      <a href="politica.html">Política</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="favoritos.html">Mis Favoritos</a>
+      <a href="blog.html">Blog</a>
+      <button class="login-btn" onclick="toggleLogin()">Iniciar Sesión</button>
+    </div>
+  </nav>
+</header>
+
+<!-- Modal para Iniciar Sesión -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="toggleLogin()">×</span>
+    <h2>Iniciar Sesión</h2>
+    <form id="loginForm" class="login-form">
+      <div class="input-group">
+        <input type="text" id="username" placeholder="Usuario" required>
+        <i class="fas fa-user"></i>
+      </div>
+      <div class="input-group">
+        <input type="password" id="password" placeholder="Contraseña" required>
+        <i class="fas fa-lock"></i>
+      </div>
+      <button type="submit" class="login-btn-form">Iniciar Sesión</button>
+      <p class="register-link">¿No tienes cuenta? <a href="registro.html">Regístrate</a></p>
+    </form>
+    <p id="loginMessage"></p>
+  </div>
+</div>
+  <main>
+    <section class="hero">
+      <video autoplay muted loop class="hero-video">
+         <source src="https://videos.pexels.com/video-files/854214/854214-hd_1920_1080_24fps.mp4" type="video/mp4">
+  Tu navegador no soporta videos.
+      </video>
+      <div class="hero-content">
+        <h1>Encuentra tu Hogar Ideal con MYHOME</h1>
+        <p class="hero-subtitle">Más de 3,123 asesores calificados para tu búsqueda.</p>
+        <form class="search-form" onsubmit="quickSearch(event)">
+          <select name="ubicacion">
+            <option value="">Ubicación</option>
+            <option value="miraflores">Miraflores</option>
+            <option value="san-isidro">San Isidro</option>
+            <option value="surco">Surco</option>
+          </select>
+          <select name="tipo">
+            <option value="">Tipo de Propiedad</option>
+            <option value="casa">Casa</option>
+            <option value="departamento">Departamento</option>
+            <option value="terreno">Terreno</option>
+          </select>
+          <input type="number" name="precio" placeholder="Precio Máximo ($)">
+          <button type="submit">Buscar</button>
+        </form>
+        <a href="contactanos.html" class="contact-btn">Contáctanos</a>
+      </div>
+    </section>
+    <section class="why-choose-us">
+      <h2>¿Por qué elegir MYHOME?</h2>
+      <div class="why-grid">
+        <div class="why-item">
+          <i class="fas fa-users"></i>
+          <h3>Expertos Calificados</h3>
+          <p>Contamos con los mejores asesores inmobiliarios.</p>
+        </div>
+        <div class="why-item">
+          <i class="fas fa-home"></i>
+          <h3>Variedad de Propiedades</h3>
+          <p>Encuentra casas, departamentos y más.</p>
+        </div>
+        <div class="why-item">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Seguridad Garantizada</h3>
+          <p>Transacciones confiables y transparentes.</p>
+        </div>
+      </div>
+    </section>
+    <section class="properties" id="properties">
+  <h2>Propiedades Destacadas</h2>
+  <div class="property-grid" id="propertyGrid">
+    <div class="property-card">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Casa en Miraflores">
+      <h3>Casa en Miraflores</h3>
+      <p>Ubicación: Lima</p>
+      <p>3 hab. | 2 baños | 120 m²</p>
+      <p class="details">$250,000</p>
+      <button class="contact-btn">Contactar Agente</button>
+      <i class="fas fa-heart favorite-icon" onclick="toggleFavorite(1)"></i>
+    </div>
+    <div class="property-card">
+      <img src="https://www.urbanaperu.com.pe/wp-content/uploads/2024/05/comprar-un-departamento-en-San-Isidro.jpg" alt="Departamento en San Isidro">
+      <h3>Departamento en San Isidro</h3>
+      <p>Ubicación: Lima</p>
+      <p>2 hab. | 2 baños | 90 m²</p>
+      <p class="details">$180,000</p>
+      <a href="#" class="contact-btn">Contactar Agente</a>
+      <i class="fas fa-heart favorite-icon" onclick="toggleFavorite(2)"></i>
+    </div>
+    <div class="property-card">
+      <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/611480889.jpg?k=7f74dba23bedcee54ec986cf6185e14d4165dd878f7739aab2069084a2237ebb&o=&hp=1" alt="Chalet en Surco">
+      <h3>Chalet en Surco</h3>
+      <p>Ubicación: Lima</p>
+      <p>4 hab. | 3 baños | 150 m²</p>
+      <p class="details">$350,000</p>
+      <button class="contact-btn">Contactar Agente</button>
+      <i class="fas fa-heart favorite-icon" onclick="toggleFavorite(3)"></i>
+    </div>
+    <div class="property-card">
+      <img src="https://img3.idealista.com/blur/WEB_DETAIL-M-L/0/id.pro.es.image.master/57/87/99/1188828020.jpg" alt="Ático en Barranco">
+      <h3>Ático en Barranco</h3>
+      <p>Ubicación: Lima</p>
+      <p>2 hab. | 1 baño | 80 m²</p>
+      <p class="details">$200,000</p>
+      <button class="contact-btn">Contactar Agente</button>
+      <i class="fas fa-heart favorite-icon" onclick="toggleFavorite(4)"></i>
+    </div>
+    <div class="property-card">
+      <img src="https://img10.naventcdn.com/avisos/111/01/43/62/09/21/360x266/1463688793.jpg?isFirstImage=true" alt="Casa en La Molina">
+      <h3>Casa en La Molina</h3>
+      <p>Ubicación: Lima</p>
+      <p>3 hab. | 2 baños | 130 m²</p>
+      <p class="details">$270,000</p>
+      <button class="contact-btn">Contactar Agente</button>
+      <i class="fas fa-heart favorite-icon" onclick="toggleFavorite(5)"></i>
+    </div>
+    <div class="property-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzeGV-KW6knMVR4mSk7VGx7a8OaMgPsrp8xA&s" alt="Departamento en Lince">
+      <h3>Departamento en Lince</h3>
+      <p>Ubicación: Lima</p>
+      <p>2 hab. | 1 baño | 85 m²</p>
+      <p class="details">$160,000</p>
+      <button class="contact-btn">Contactar Agente</button>
+      <i class="fas fa-heart favorite-icon" onclick="toggleFavorite(6)"></i>
+    </div>
+    <div class="property-card">
+      <img src="https://bolsainmobiliaria.pe/storage/anuncios/SyQFP30KFnOIKiUO5J0eKybZffWrmhmLnSXLRFX6.jpeg" alt="Casa en Chorrillos">
+      <h3>Casa en Chorrillos</h3>
+      <p>Ubicación: Lima</p>
+      <p>4 hab. | 3 baños | 150 m²</p>
+      <p class="details">$330,000</p>
+      <button class="contact-btn">Contactar Agente</button>
+      <i class="fas fa-heart favorite-icon" onclick="toggleFavorite(7)"></i>
+    </div>
+    <div class="property-card">
+      <img src="https://lugano.pe/optsystem/wp-content/uploads/elementor/thumbs/departamentos-en-Jesus-Maria-con-entrega-inmediata1-q9m04yvgjhu9z3pg1mb1tf2yiiuj5rgw847vq1hwdk.jpg" alt="Departamento en Jesús María">
+      <h3>Departamento en Jesús María</h3>
+      <p>Ubicación: Lima</p>
+      <p>3 hab. | 2 baños | 100 m²</p>
+      <p class="details">$220,000</p>
+      <button class="contact-btn">Contactar Agente</button>
+      <i class="fas fa-heart favorite-icon" onclick="toggleFavorite(8)"></i>
+    </div>
+    <div class="property-card">
+      <img src="https://cst-media2.viomassl.com/4748/301117/1920x1080s/wellness_spa_hotel_villa_magdalena.jpg" alt="Villa en Magdalena">
+      <h3>Villa en Magdalena</h3>
+      <p>Ubicación: Lima</p>
+      <p>5 hab. | 4 baños | 200 m²</p>
+      <p class="details">$450,000</p>
+      <button class="contact-btn">Contactar Agente</button>
+      <i class="fas fa-heart favorite-icon" onclick="toggleFavorite(9)"></i>
+    </div>
+  </div>
+</section>
+    <section class="mortgage-calculator">
+      <h2>Calculadora de Hipoteca</h2>
+      <p class="calc-info">Calcula tus pagos mensuales para comprar tu nueva propiedad. Ingresa el monto, tasa de interés y plazo.</p>
+      <form class="calc-form" onsubmit="calculateMortgage(event)">
+        <input type="number" id="loanAmount" placeholder="Monto del Préstamo ($)" required>
+        <input type="number" id="interestRate" placeholder="Tasa de Interés (%)" step="0.01" required>
+        <input type="number" id="loanTerm" placeholder="Plazo (Años)" required>
+        <button type="submit">Calcular</button>
+      </form>
+      <p id="monthlyPayment"></p>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Enlaces Rápidos</h4>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="contactanos.html">Contáctanos</a>
+        <a href="politica.html">Política</a>
+      </div>
+      <div class="footer-section">
+        <h4>Contáctanos</h4>
+        <p>Email: info@myhome.com</p>
+        <p>Teléfono: +51 987 654 321</p>
+        <a href="https://wa.me/51987654321" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </div>
+      <div class="footer-section">
+        <h4>Síguenos</h4>
+        <a href="https://web.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+    <p class="footer-bottom">© 2025 MYHOME | Todos los derechos reservados</p>
+  </footer>
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="toggleLogin()">×</span>
+      <h3>Iniciar Sesión</h3>
+      <form id="loginForm" onsubmit="handleLogin(event)">
+        <input type="text" placeholder="Usuario" required>
+        <input type="password" placeholder="Contraseña" required>
+        <button type="submit">Iniciar Sesión</button>
+      </form>
+      <p id="loginMessage"></p>
+    </div>
+  </div>
+  <div id="detailsModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">×</span>
+      <div id="propertyDetails"></div>
+      <div id="carousel-controls">
+        <button id="prevSlide" onclick="plusSlides(-1)">❮</button>
+        <button id="nextSlide" onclick="plusSlides(1)">❯</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asesores - MYHOME</title>
+  <link rel="stylesheet" href="asesores.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <span class="logo-text">MYHOME</span>
+    </div>
+    <nav class="nav-menu">
+      <div class="menu-icon" onclick="toggleMenu()">☰</div>
+      <div class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="registro.html">Registro</a>
+        <a href="buscar-propiedades.html">Buscar Propiedades</a>
+        <a href="asesores.html">Asesores</a>
+        <a href="contactanos.html">Contáctanos</a>
+        <a href="politica.html">Política</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="favoritos.html">Mis Favoritos</a>
+        <a href="blog.html">Blog</a>
+        <button class="login-btn" onclick="toggleLogin()">Iniciar Sesión</button>
+      </div>
+    </nav>
+  </header>
+  <main>
+   <section class="asesores-destacados">
+  <h2>Nuestros Asesores Destacados</h2>
+  <div class="asesores-grid">
+    <div class="asesor-card">
+      <img src="https://images.pexels.com/photos/7709180/pexels-photo-7709180.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Foto de Juan Pérez" class="asesor-photo">
+      <h3>Juan Pérez</h3>
+      <p><i class="fas fa-phone"></i> +51 987 654 321</p>
+      <p><i class="fas fa-envelope"></i> juan.perez@myhome.com</p>
+    </div>
+    <div class="asesor-card">
+      <img src="https://images.pexels.com/photos/7414946/pexels-photo-7414946.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Foto de María Gómez" class="asesor-photo">
+      <h3>María Gómez</h3>
+      <p><i class="fas fa-phone"></i> +51 987 654 322</p>
+      <p><i class="fas fa-envelope"></i> maria.gomez@myhome.com</p>
+    </div>
+    <div class="asesor-card">
+      <img src="https://www.shutterstock.com/image-photo/man-accountant-portrait-arms-crossed-600nw-2513214377.jpg" alt="Foto de Carlos López" class="asesor-photo">
+      <h3>Carlos López</h3>
+      <p><i class="fas fa-phone"></i> +51 987 654 323</p>
+      <p><i class="fas fa-envelope"></i> carlos.lopez@myhome.com</p>
+    </div>
+    <div class="asesor-card">
+      <img src="https://magazine.caser.es/wp-content/uploads/2020/10/Asesores-comerciales.jpg" alt="Foto de Ana Ruiz" class="asesor-photo">
+      <h3>Ana Ruiz</h3>
+      <p><i class="fas fa-phone"></i> +51 987 654 324</p>
+      <p><i class="fas fa-envelope"></i> ana.ruiz@myhome.com</p>
+    </div>
+    <div class="asesor-card">
+      <img src="https://images.pexels.com/photos/7108189/pexels-photo-7108189.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Foto de Pedro Gómez" class="asesor-photo">
+      <h3>Pedro Gómez</h3>
+      <p><i class="fas fa-phone"></i> +51 987 654 325</p>
+      <p><i class="fas fa-envelope"></i> pedro.gomez@myhome.com</p>
+    </div>
+    <div class="asesor-card">
+      <img src="https://images.pexels.com/photos/5398945/pexels-photo-5398945.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Foto de Laura Díaz" class="asesor-photo">
+      <h3>Laura Díaz</h3>
+      <p><i class="fas fa-phone"></i> +51 987 654 326</p>
+      <p><i class="fas fa-envelope"></i> laura.diaz@myhome.com</p>
+    </div>
+    <div class="asesor-card">
+      <img src="https://images.pexels.com/photos/7648248/pexels-photo-7648248.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Foto de Miguel Torres" class="asesor-photo">
+      <h3>Miguel Torres</h3>
+      <p><i class="fas fa-phone"></i> +51 987 654 327</p>
+      <p><i class="fas fa-envelope"></i> miguel.torres@myhome.com</p>
+    </div>
+    <div class="asesor-card">
+      <img src="https://images.pexels.com/photos/26692095/pexels-photo-26692095/free-photo-of-mujer-escritorio-ordenador-portatil-oficina.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Foto de Sofía Morales" class="asesor-photo">
+      <h3>Sofía Morales</h3>
+      <p><i class="fas fa-phone"></i> +51 987 654 328</p>
+      <p><i class="fas fa-envelope"></i> sofia.morales@myhome.com</p>
+    </div>
+    <div class="asesor-card">
+      <img src="https://images.pexels.com/photos/7643737/pexels-photo-7643737.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Foto de Luis Fernández" class="asesor-photo">
+      <h3>Luis Fernández</h3>
+      <p><i class="fas fa-phone"></i> +51 987 654 329</p>
+      <p><i class="fas fa-envelope"></i> luis.fernandez@myhome.com</p>
+    </div>
+    <div class="asesor-card">
+      <img src="https://images.pexels.com/photos/8424522/pexels-photo-8424522.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Foto de Carmen Soto" class="asesor-photo">
+      <h3>Carmen Soto</h3>
+      <p><i class="fas fa-phone"></i> +51 987 654 330</p>
+      <p><i class="fas fa-envelope"></i> carmen.soto@myhome.com</p>
+    </div>
+  </div>
+  <a href="registro-asesor.html" class="become-asesor-btn">Conviértete en uno de nuestros asesores</a>
+</section>
+  </main>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Enlaces Rápidos</h4>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="contactanos.html">Contáctanos</a>
+        <a href="politica.html">Política</a>
+      </div>
+      <div class="footer-section">
+        <h4>Contáctanos</h4>
+        <p>Email: info@myhome.com</p>
+        <p>Teléfono: +51 987 654 321</p>
+        <a href="https://wa.me/51987654321" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </div>
+      <div class="footer-section">
+        <h4>Síguenos</h4>
+        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+    <p class="footer-bottom">© 2025 MYHOME | Todos los derechos reservados</p>
+  </footer>
+
+  <!-- Modal para Iniciar Sesión (reutilizable desde index.html) -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="toggleLogin()">×</span>
+      <h2>Iniciar Sesión</h2>
+      <form id="loginForm" class="login-form">
+        <div class="input-group">
+          <input type="text" id="username" placeholder="Usuario" required>
+          <i class="fas fa-user"></i>
+        </div>
+        <div class="input-group">
+          <input type="password" id="password" placeholder="Contraseña" required>
+          <i class="fas fa-lock"></i>
+        </div>
+        <button type="submit" class="login-btn-form">Iniciar Sesión</button>
+        <p class="register-link">¿No tienes cuenta? <a href="registro.html">Regístrate</a></p>
+      </form>
+      <p id="loginMessage"></p>
+    </div>
+  </div>
+
+  <script src="asesores.js"></script>
+</body>
+</html>
